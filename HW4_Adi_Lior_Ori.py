@@ -247,7 +247,7 @@ print("test loss, test acc:", results)
 
 history = new_a_model.fit(x=BaseX_train, y=BaseY_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_split=0, validation_data = (BaseX_val, BaseY_val), shuffle=True)
 print("Evaluate on test data")
-results = new_a_model.evaluate(X_test, Y_test, batch_size=batch_size)
+results = new_a_model.evaluate(X_test, Y_test, verbose=1)
 print("test loss, test acc:", results)
 
 # #-----------------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ new_a_model=load_model("results25/a_model_weights_25.h5")
 new_a_model.compile(optimizer=AdamOpt, metrics=['accuracy'], loss='categorical_crossentropy')
 history = new_a_model.fit(x=BaseX_train, y=BaseY_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_split=0, validation_data = (BaseX_val, BaseY_val), shuffle=True)
 print("Evaluate on test data")
-results = new_a_model.evaluate(X_test, Y_test, batch_size=batch_size)
+results = new_a_model.evaluate(X_test, Y_test, verbose=1)
 print("test loss, test acc:", results)
 #-----------------------------------------------------------------------------------------
 
@@ -323,7 +323,7 @@ AdamOpt = Adam(lr=learn_rate,decay=decay)
 model_relu.compile(optimizer=AdamOpt, metrics=['accuracy'], loss='categorical_crossentropy')
 history = model_relu.fit(x=BaseX_train, y=BaseY_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_split=0, validation_data = (BaseX_val, BaseY_val), shuffle=True)
 print("Evaluate on test data")
-results = model_relu.evaluate(X_test, Y_test, batch_size=batch_size)
+results = model_relu.evaluate(X_test, Y_test, verbose=1)
 print("test loss, test acc:", results)
 #----------------------------------------------------------------------------------------
 
@@ -375,7 +375,7 @@ AdamOpt = Adam(lr=learn_rate,decay=decay)
 new_a_model.compile(optimizer=AdamOpt, metrics=['accuracy'], loss='categorical_crossentropy')
 history = new_a_model.fit(x=BaseX_train, y=BaseY_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_split=0, validation_data = (BaseX_val, BaseY_val), shuffle=True)
 print("Evaluate on test data")
-results = new_a_model.evaluate(X_test, Y_test, batch_size=batch_size)
+results = new_a_model.evaluate(X_test, Y_test, verbose=1)
 print("test loss, test acc:", results)
 #----------------------------------------------------------------------------------------
 
